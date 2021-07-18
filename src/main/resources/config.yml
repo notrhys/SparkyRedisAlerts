@@ -1,0 +1,10 @@
+ServerName: ExampleServer-1
+Redis:
+  IP: 127.0.0.1
+  port: 6379
+  password: "foobar"
+  channelName: "sparky-alerts"
+Message:
+  AlertMessage: "&eSparky &7> &6%PLAYER% &7has failed &6%CHECK%&7(&6%TYPE%&6&7) &cx%VL% &b(%SERVER%)"
+Permission:
+  AlertPermission: sparky.alerts
