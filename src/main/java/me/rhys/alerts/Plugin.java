@@ -6,6 +6,7 @@ import me.rhys.alerts.config.ConfigValues;
 import me.rhys.alerts.hook.PlayerListener;
 import me.rhys.alerts.hook.SparkyListener;
 import me.rhys.alerts.redis.RedisManager;
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
@@ -28,7 +29,10 @@ public class Plugin extends JavaPlugin {
         this.redisManager.connect();
 
         getServer().getPluginManager().registerEvents(new PlayerListener(), this);
-        getServer().getPluginManager().registerEvents(new SparkyListener(), this);
+
+        if (Bukkit.getPluginManager().getPlugin("Sparky") != null) {
+            getServer().getPluginManager().registerEvents(new SparkyListener(), this);
+        }
     }
 
     @Override

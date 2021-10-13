@@ -3,5 +3,5 @@ main: me.rhys.alerts.Plugin
 version: 0.1
 description: sends sparky anticheat alerts over Redis.
 author: Rhys
-depend:
+softdepend:
   - Sparky
